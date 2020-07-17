@@ -1,0 +1,17 @@
+{
+    "name": "Unity.Rotate.Editor",
+    "references": [
+        "GUID:9a6e9274b9a5f404d8649603847c90ad"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "Editor"
+    ],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
