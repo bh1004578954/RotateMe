@@ -13,8 +13,6 @@ public class Rotate : MonoBehaviour
     public GameObject GORot;
     private void Start()
     {
-        if (obj == null)
-            obj =(GameObject) AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/Prefabs/Cube.prefab",typeof(PrefabAssetType));
         GORot = Instantiate(obj, transform);
     }
     void Update()
@@ -27,5 +25,11 @@ public class Rotate : MonoBehaviour
         if (GORot == null) return;
         var rot = Quaternion.AngleAxis(angularVol * Time.deltaTime, Vector3.up);
         GORot.transform.localRotation = rot * GORot.transform.localRotation;
+    }
+    public void SetObj()
+    {
+        if (obj == null)
+            obj = (GameObject)AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/Prefabs/Cube.prefab", typeof(PrefabAssetType));
+
     }
 }
