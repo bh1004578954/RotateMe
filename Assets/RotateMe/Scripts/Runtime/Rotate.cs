@@ -10,7 +10,7 @@ public class Rotate : MonoBehaviour
 
     public GameObject obj;
     public float angularVol = 10;
-    GameObject GORot;
+    public GameObject GORot;
     private void Start()
     {
         if (obj == null)
