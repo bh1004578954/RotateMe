@@ -2,7 +2,7 @@
     "name": "com.autocore.rotate-me",
     "displayName": "Rotate Me",
     "description": "Rotate the object!",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "license": "MIT",
     "dependencies": {}
 }
