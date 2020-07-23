@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿using System;
+using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,9 +13,26 @@ public class Rotate : MonoBehaviour
     GameObject GORot;
     private void Start()
     {
-        if(obj==null)
-            obj = AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/RotateMe/Prefabs/Cube.prefab", typeof(GameObject)) as GameObject;
-        GORot =Instantiate(obj, transform);
+        
+        DirectoryInfo direction = new DirectoryInfo(Path.GetFullPath(Environment.CurrentDirectory));
+        Debug.Log(direction.FullName);
+        FileInfo[] files = direction.GetFiles("*.prefab", SearchOption.AllDirectories);
+
+        Debug.Log(files.Length);
+        for (int i = 0; i < files.Length; i++)
+        {
+            if (files[i].Name.EndsWith(".meta"))
+            {
+                continue;
+            }
+            Debug.Log("Name:" + files[i].Name);
+            //Debug.Log("FullName:" + files[i].FullName);
+            //Debug.Log("DirectoryName:" + files[i].DirectoryName);
+
+        }
+        //if (obj==null)
+        //    obj = (GameObject)AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/Prefabs/Cube.prefab", typeof(GameObject));
+        //GORot =Instantiate(obj, transform);
     }
     void Update()
     {
