@@ -14,7 +14,7 @@ public class Rotate : MonoBehaviour
     private void Start()
     {
         if (obj == null)
-            obj = AssetDatabase.LoadAssetAtPath<GameObject>("Package/com.autocore.rotate-me/Prefabs/Cube.prefab");
+            obj =(GameObject) AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/Prefabs/Cube.prefab",typeof(PrefabAssetType));
         GORot = Instantiate(obj, transform);
     }
     void Update()
