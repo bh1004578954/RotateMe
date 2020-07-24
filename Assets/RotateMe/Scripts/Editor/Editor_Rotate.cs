@@ -15,12 +15,7 @@ public class Editor_Rotate : Editor
 
         if (GUILayout.Button("Set obj"))
         {
-            GameObject g = AssetDatabase.LoadAssetAtPath<GameObject>("Package/com.autocore.rotate-me/Prefabs/Cube.prefab");
-            Debug.Log(Path.GetFileName("Package / com.autocore.rotate - me / Prefabs / Cube.prefab"));
-            if (g == null) Debug.Log("null");
-            else Debug.Log(g.name);
-            Instantiate(g);
-            rotate.SetObj(g); 
+            Rotate.SetObj(); 
         }
     }
 }
