@@ -26,8 +26,9 @@ public class Rotate : MonoBehaviour
         var rot = Quaternion.AngleAxis(angularVol * Time.deltaTime, Vector3.up);
         GORot.transform.localRotation = rot * GORot.transform.localRotation;
     }
+    [ExecuteInEditMode]
     public void SetObj( GameObject go)
     {
-            obj = go;
+       obj = go;
     }
 }
