@@ -28,8 +28,6 @@ public class Rotate : MonoBehaviour
     }
     public void SetObj( GameObject go)
     {
-        if (obj == null)
             obj = go;
-
     }
 }
