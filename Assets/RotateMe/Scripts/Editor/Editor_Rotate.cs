@@ -17,7 +17,7 @@ public class Editor_Rotate : Editor
         {
             GameObject g = AssetDatabase.LoadAssetAtPath<GameObject>("Package/com.autocore.rotate-me/Prefabs/Cube.prefab");
             Debug.Log(Path.GetFileName("Package / com.autocore.rotate - me / Prefabs / Cube.prefab"));
-
+            Instantiate(g);
             rotate.SetObj(g); 
         }
     }
