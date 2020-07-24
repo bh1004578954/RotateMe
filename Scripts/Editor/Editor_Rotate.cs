@@ -14,7 +14,7 @@ public class Editor_Rotate : Editor
 
         if (GUILayout.Button("Set obj"))
         {
-            rotate.SetObj(); ;
+            rotate.SetObj((GameObject)AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/Prefabs/Cube.prefab", typeof(GameObject))); 
         }
     }
 }
