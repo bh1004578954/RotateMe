@@ -21,7 +21,7 @@ public class Rotate : MonoBehaviour
         {
             Event.Invoke();
         }
-
+         
         if (GORot == null) return;
         var rot = Quaternion.AngleAxis(angularVol * Time.deltaTime, Vector3.up);
         GORot.transform.localRotation = rot * GORot.transform.localRotation;
@@ -29,7 +29,7 @@ public class Rotate : MonoBehaviour
     public void SetObj()
     {
         if (obj == null)
-            obj = (GameObject)AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/Prefabs/Cube.prefab", typeof(PrefabAssetType));
+            obj = (GameObject)AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/Prefabs/Cube.prefab", typeof(GameObject));
 
     }
 }
