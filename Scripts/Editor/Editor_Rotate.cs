@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime;
 using UnityEditor;
 using UnityEngine;
@@ -14,7 +15,10 @@ public class Editor_Rotate : Editor
 
         if (GUILayout.Button("Set obj"))
         {
-            rotate.SetObj((GameObject)AssetDatabase.LoadAssetAtPath("Package/com.autocore.rotate-me/Prefabs/Cube.prefab", typeof(GameObject))); 
+            GameObject g = AssetDatabase.LoadAssetAtPath<GameObject>("Package/com.autocore.rotate-me/Prefabs/Cube.prefab");
+            Debug.Log(Path.GetFileName("Package / com.autocore.rotate - me / Prefabs / Cube.prefab"));
+
+            rotate.SetObj(g); 
         }
     }
 }
